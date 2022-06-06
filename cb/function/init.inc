@@ -5,3 +5,5 @@
 
 #include "../lib/cb/function/GetBlockName"
 #include "../lib/cb/function/SetBlockName"
+
+#include "../lib/cb/function/IsPlayerModerOrHost"
