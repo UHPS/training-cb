@@ -126,6 +126,7 @@ Dialog:MenuSetName(playerid, response, listitem, inputtext[])
     
     if(strlen(inputtext) > 12) strdel(inputtext,12,strlen(inputtext) + 1);
     SetBlockName(GetPlayerVirtualWorld(playerid),inputtext);
+    Show->BlockMenu(playerid);
     
     return true;
 
