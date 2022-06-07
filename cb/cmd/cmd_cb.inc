@@ -19,7 +19,7 @@ CMD:cb(playerid, params[])
 }
 
 /**
-    Òóò â áóäóùåì áóäóò ïğîâåğêè åñòü äîñòóï ó èãğîêà ê ÊÁ äàííîé cmd èëè íåò
+    Ã’Ã³Ã² Ã¢ Ã¡Ã³Ã¤Ã³Ã¹Ã¥Ã¬ Ã¡Ã³Ã¤Ã³Ã² Ã¯Ã°Ã®Ã¢Ã¥Ã°ÃªÃ¨ Ã¥Ã±Ã²Ã¼ Ã¤Ã®Ã±Ã²Ã³Ã¯ Ã³ Ã¨Ã£Ã°Ã®ÃªÃ  Ãª ÃŠÃ Ã¤Ã Ã­Ã­Ã®Ã© cmd Ã¨Ã«Ã¨ Ã­Ã¥Ã²
 */
 Access::cb(playerid)
 {
@@ -27,12 +27,12 @@ Access::cb(playerid)
 }
 
 /**
-    Òóò âàëèäèğóşòñÿ ïàğàìåòğû è ò.ä.
+    Ã’Ã³Ã² Ã¢Ã Ã«Ã¨Ã¤Ã¨Ã°Ã³Ã¾Ã²Ã±Ã¿ Ã¯Ã Ã°Ã Ã¬Ã¥Ã²Ã°Ã» Ã¨ Ã².Ã¤.
 */
 Request:cb(playerid, blockid)
 {
     if (!IsValidBlock(blockid)) {
-        SendServerMessage(playerid, "Íåâåğíî óêàçàí ID áëîêà");
+        SendServerMessage(playerid, "ÃÃ¥Ã¢Ã¥Ã°Ã­Ã® Ã³ÃªÃ Ã§Ã Ã­ ID Ã¡Ã«Ã®ÃªÃ ");
         return false;
     }
 
@@ -40,19 +40,19 @@ Request:cb(playerid, blockid)
 }
 
 /**
-    Ôîğìèğîâêà ñòğîêè äëÿ ïåğåäà÷è â äèàëîã
+    Ã”Ã®Ã°Ã¬Ã¨Ã°Ã®Ã¢ÃªÃ  Ã±Ã²Ã°Ã®ÃªÃ¨ Ã¤Ã«Ã¿ Ã¯Ã¥Ã°Ã¥Ã¤Ã Ã·Ã¨ Ã¢ Ã¤Ã¨Ã Ã«Ã®Ã£
 */
 Resource:BlockMenu(world, blockid)
 {
     new str[1024] = "{FFFFFF}";
 
-    format(str, sizeof(str), "%sÈìÿ\t[ %s ]", str, GetBlockName(world, blockid));
-    format(str, sizeof(str), "%sÑòàòóñ\t[ %s ]", str, GetBlockStatus(world, blockid)); // İòîé ôóíêöèè íåò, íàäî ñîçäàòü
-    format(str, sizeof(str), "%sÁèíä\t[ %s ]", str, GetBlockBind(world, blockid)); // İòîé ôóíêöèè íåò, íàäî ñîçäàòü
-    format(str, sizeof(str), "%sÓñëîâèé\t[ %d ]", str, GetBlockRulesCount(world, blockid)); // İòîé ôóíêöèè íåò, íàäî ñîçäàòü
-    format(str, sizeof(str), "%Êîëëáåêîâ\t[ %d ]", str, GetBlockCallbackCount(world, blockid)); // İòîé ôóíêöèè íåò, íàäî ñîçäàòü
-    format(str, sizeof(str), "%Ôóíêöèé\t[ %d ]", str, GetBlockCallbackCount(world, blockid)); // İòîé ôóíêöèè íåò, íàäî ñîçäàòü
-    format(str, sizeof(str), "%Àêòèâàöèÿ\t[ %s ]", str, GetBlockActivation(world, blockid)); // İòîé ôóíêöèè íåò, íàäî ñîçäàòü
+    format(str, sizeof(str), "%sÃˆÃ¬Ã¿\t[ %s ]", str, GetBlockName(world, blockid));
+    format(str, sizeof(str), "%sÃ‘Ã²Ã Ã²Ã³Ã±\t[ %s ]", str, GetBlockStatus(world, blockid)); // ÃÃ²Ã®Ã© Ã´Ã³Ã­ÃªÃ¶Ã¨Ã¨ Ã­Ã¥Ã², Ã­Ã Ã¤Ã® Ã±Ã®Ã§Ã¤Ã Ã²Ã¼
+    format(str, sizeof(str), "%sÃÃ¨Ã­Ã¤\t[ %s ]", str, GetBlockBind(world, blockid)); // ÃÃ²Ã®Ã© Ã´Ã³Ã­ÃªÃ¶Ã¨Ã¨ Ã­Ã¥Ã², Ã­Ã Ã¤Ã® Ã±Ã®Ã§Ã¤Ã Ã²Ã¼
+    format(str, sizeof(str), "%sÃ“Ã±Ã«Ã®Ã¢Ã¨Ã©\t[ %d ]", str, GetBlockRulesCount(world, blockid)); // ÃÃ²Ã®Ã© Ã´Ã³Ã­ÃªÃ¶Ã¨Ã¨ Ã­Ã¥Ã², Ã­Ã Ã¤Ã® Ã±Ã®Ã§Ã¤Ã Ã²Ã¼
+    format(str, sizeof(str), "%ÃŠÃ®Ã«Ã«Ã¡Ã¥ÃªÃ®Ã¢\t[ %d ]", str, GetBlockCallbackCount(world, blockid)); // ÃÃ²Ã®Ã© Ã´Ã³Ã­ÃªÃ¶Ã¨Ã¨ Ã­Ã¥Ã², Ã­Ã Ã¤Ã® Ã±Ã®Ã§Ã¤Ã Ã²Ã¼
+    format(str, sizeof(str), "%Ã”Ã³Ã­ÃªÃ¶Ã¨Ã©\t[ %d ]", str, GetBlockCallbackCount(world, blockid)); // ÃÃ²Ã®Ã© Ã´Ã³Ã­ÃªÃ¶Ã¨Ã¨ Ã­Ã¥Ã², Ã­Ã Ã¤Ã® Ã±Ã®Ã§Ã¤Ã Ã²Ã¼
+    format(str, sizeof(str), "%Ã€ÃªÃ²Ã¨Ã¢Ã Ã¶Ã¨Ã¿\t[ %s ]", str, GetBlockActivation(world, blockid)); // ÃÃ²Ã®Ã© Ã´Ã³Ã­ÃªÃ¶Ã¨Ã¨ Ã­Ã¥Ã², Ã­Ã Ã¤Ã® Ã±Ã®Ã§Ã¤Ã Ã²Ã¼
 
     return str;
 }
@@ -72,7 +72,7 @@ Request:BlockMenu(playerid, response, listitem, inputtext)
 }
 
 /**
-    İòî ïğîñòî îòîáğàæåíèå äèàëîãà
+    ÃÃ²Ã® Ã¯Ã°Ã®Ã±Ã²Ã® Ã®Ã²Ã®Ã¡Ã°Ã Ã¦Ã¥Ã­Ã¨Ã¥ Ã¤Ã¨Ã Ã«Ã®Ã£Ã 
 */
 View:BlockMenu(playerid)
 {
@@ -101,5 +101,33 @@ Dialog:BlockMenu(playerid, response, listitem, inputtext[])
         return false;
     }
 
+
+    if(listitem == 0) return Show->MenuSetName(playerid);
+    
     return true;
+}
+
+View:MenuSetName(playerid)
+{
+        return Dialog_Show(
+        playerid,
+        MenuSetName,
+        DIALOG_STYLE_INPUT,
+        "Ğ¡Ğ¼ĞµĞ½Ğ° Ğ½Ğ°Ğ·Ğ²Ğ°Ğ½Ğ¸Ñ ĞšĞ‘",
+        "Ğ£ĞºĞ°Ğ¶Ğ¸Ñ‚Ğµ Ğ¸Ğ¼Ñ ĞºĞ¾Ğ¼Ğ°Ğ½Ğ´Ğ½Ğ¾Ğ³Ğ¾ Ğ±Ğ»Ğ¾ĞºĞ° (Ğ´Ğ¾ 12 ÑĞ¸Ğ¼Ğ²Ğ¾Ğ»Ğ¾Ğ²):",
+        "Y",
+        "X"
+    );
+}
+
+Dialog:MenuSetName(playerid, response, listitem, inputtext[])
+{
+    if(!response) return Show->BlockMenu(playerid);
+    
+    if(strlen(inputtext) > 12) strdel(inputtext,12,strlen(inputtext) + 1);
+    SetBlockName(GetPlayerVirtualWorld(playerid),inputtext);
+    Show->BlockMenu(playerid);
+    
+    return true;
+
 }
